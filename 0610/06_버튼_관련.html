@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 - 06_버튼_관련</title>
+  </style>
+  <!-- 1. 부트스트랩 cdn방식으로 css연결하기 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- 2. 부트스트랩 cdn방식으로 js연결하기 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+</head>
+<body>
+  <h2>부트스트랩 - 06_버튼_관련</h2>
+
+  <p>버튼은 button태그를 사용하여 클래스명('btn')을 적용한다.</p>
+
+  <ul>
+    <li>어둡게 : class="btn btn-dark"</li>
+    <li>흰색 : class="btn btn-light"</li>
+    <li>파랑 : class="btn btn-primary"</li>
+    <li>그레이 : class="btn btn-secondary"</li>
+    <li>초록 : class="btn btn-success"</li>
+    <li>하늘색 : class="btn btn-info"</li>
+    <li>주황색 : class="btn btn-warning"</li>
+    <li>빨강 : class="btn btn-danger"</li>
+    <li>일반 링크 : class="btn btn-link"</li>
+  </ul>
+
+  <button type="button" class="btn">일반 button</button>
+  <button type="button" class="btn btn-primary"> 파랑 primary button</button>
+  <button type="button" class="btn btn-secondary">회색 secondary button</button>
+  <button type="button" class="btn btn-success">초록 success button</button>
+  <button type="button" class="btn btn-danger">빨강 danger button</button>
+  <button type="button" class="btn btn-warning">경고 warning button</button>
+  <button type="button" class="btn btn-info">인포 info button</button>
+  <button type="button" class="btn btn-light">라이트 light button</button>
+  <button type="button" class="btn btn-dark">다크 dark button</button>
+  <button type="button" class="btn btn-link">링크 link button</button>
+
+  <input type="submit" value="전송하기" class="btn btn-primary">
+  <input type="button" value="로그인하기" class="btn btn-primary">
+  <input type="reset" value="취소하기" class="btn btn-light">
+  <a href="#" class="btn btn-light">취소하기</a>
+  <p>버튼은 button, input type=button, a태그요소에도 모두 적용이 가능하다.</p>
+
+
+  <h3>버튼 테두리만 적용 : class='btn-outline-dark'</h3>
+  <button class="btn btn-outline-dark">검정 테두리</button>
+  <button class="btn btn-outline-light">라이트 테두리</button>
+  <button class="btn btn-outline-primary">파랑 테두리</button>
+  <button class="btn btn-outline-secondary">회색 테두리</button>
+  <button class="btn btn-outline-success">녹색 테두리</button>
+  <button class="btn btn-outline-info">하늘 테두리</button>
+  <button class="btn btn-outline-warning">주황 테두리</button>
+  <button class="btn btn-outline-danger">빨강 테두리</button>
+  <button class="btn btn-outline-link">링크 테두리</button>
+
+  <h3>버튼 크기지정하기 : btn-lg(20px), btn-sm(14px)</h3>
+  <button class="btn btn-outline-primary">button</button>
+  <button class="btn btn-outline-primary btn-lg">큰 button</button>
+  <button class="btn btn-outline-primary btn-sm">작은 button</button>
+
+  <h3>버튼 비활성화</h3>
+  <button type="button" class="btn btn-primary" disabled>button 비활성화</button>
+  <a disabled class="btn">a요소 비활성화 href쓰면 안됨</a>
+
+  <h3>버튼블럭 : class='d-grid gap-2' 적용시 반응형 버튼으로 가로 100%로 설정됨.</h3>
+  <div class="d-grid gap-2">
+    <button type="button" class="btn btn-primary">로그인</button>
+    <button type="button" class="btn btn-danger">회원가입</button>
+  </div>
+
+  <h3>버튼그룹지정 : class="btn-group"</h3>
+  <p>여러 개의 버튼을 묶어 그룹화하거나, 세로로 겹쳐 놓을 수 있습니다.</p>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Center</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div>
+
+  <h3>버튼그룹 지정시 첫번째 버튼만 활성화 하기 : active</h3>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary active">Left</button>
+    <button type="button" class="btn btn-primary">Center</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div>
+
+  <h3>버튼그룹 지정시 테두리만 나오게하기</h3>
+  <div class="btn-group">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Center</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+
+</body>
+</html>
