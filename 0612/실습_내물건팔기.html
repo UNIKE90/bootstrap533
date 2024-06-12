@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당근마켓_내물건팔기</title>
+  <!-- 1. 부트스트랩 cdn방식으로 css연결하기 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- 2. 부트스트랩 cdn방식으로 js연결하기 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 부트스트랩 아이콘 cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" type="text/css">
+  <style>
+    /* body{
+      width:500px;
+      margin:0 auto;
+      position:relative;
+    } */
+    header{
+      border-bottom:1px solid #ccc;
+    }
+    header .btn-close{
+      margin: 10px 0 0 10px;
+    }
+    header .btn{color:#ccc;}
+
+    form{padding:20px;}
+    form label[for="photo"]{
+      border:1px solid #ccc;
+      color:#888;
+    }
+
+    label.btn{border: 1px solid #ccc;}
+    input[type="radio"]:checked + label{
+      background:#333;
+      color:#fff;
+      border:1px solid #333;
+    }
+    textarea{
+      resize: none;
+    }
+    #location{
+      width:100%;
+      background:#fff;
+      border:1px solid #ccc;
+      border-radius:5px;
+      text-align: left;
+      padding:20px;
+    }
+    #location i{
+      float:right;
+    }
+    .select_town{
+      color:#888;
+      text-decoration: none;
+    }
+    
+    footer{
+      background:#fff;
+      width:100%;
+      height:80px;
+      position:fixed;
+      bottom:0;
+    }
+    footer input{
+      width:calc(100% - 40px);
+      line-height: 60px;
+      background:#ff5e00;
+      color:#fff;
+      border:none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size:20px;
+      top:10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더영역 -->
+  <header class="d-flex justify-content-between">
+    <button type="button" class="btn-close"></button>
+    <h1 class="fs-5 fw-bold mt-2">내 물건 팔기</h1>
+    <button class="btn">임시저장</button>
+  </header>
+
+  <form name="" method="post" action="">
+  <!-- 메인영역 -->
+  <main>
+      <fieldset>
+        <legend class="d-none">내 물건 팔기 입력양식</legend>
+        <label for="photo" class="text-center btn mb-4"><i class="bi bi-camera-fill fs-5"></i><br><span class="photo_count">0</span>/10</label>
+        <input type="file" name="photo" id="photo" class="d-none">
+
+        <br>
+
+        <label for="title" class="fw-bold mb-2">제목</label>
+        <input type="text" name="title" id="title" class="form-control form-control-lg fs-6 mb-4" placeholder="제목">
+
+        <label for="dealing" class="fw-bold mb-2">거래 방식</label>
+        <br>
+        <input type="radio" name="dealing" id="sale" class="d-none" checked>
+        <label for="sale" class="form-check-label btn rounded-pill mb-2">판매하기</label>
+        <input type="radio" name="dealing" id="share" class="d-none">
+        <label for="share" class="form-check-label btn rounded-pill mb-2">나눔하기</label>
+        <br>
+        <input type="number" name="price" id="price" class="form-control form-control-lg fs-6 mb-2" placeholder="\ 가격을 입력해주세요.">
+        <input type="checkbox" name="offer" id="offer" class="form-check-input">
+        <label for="offer" class="form-check-label mb-4"> 가격 제안 받기</label>
+
+        <br>
+
+        <label for="content" class="fw-bold mb-2">자세한 설명</label>
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="다산동에 올릴 게시글 내용을 작성해 주세요. (판매 금지 물품은 게시가 제한될 수 있어요.)&#13;&#10;&#13;&#10;신뢰할 수 있는 거래를 위해 자세히 적어주세요.&#13;&#10;과학기술정보통신부, 한국 인터넷 진흥원과 함께 해요." class="form-control mb-2"></textarea>
+        <button type="button" class="btn btn-light fw-bold mb-4">자주 쓰는 문구</button>
+
+        <br>
+
+        <label for="location" class="fw-bold mb-2">거래희망장소</label>
+        <br>
+        <button type="button" id="location" name="location" class="mb-4">위치 추가 <i class="bi bi-chevron-right"></i></button>
+
+        <br>
+        <a href="#" class="select_town">보여줄 동네 선택 <i class="bi bi-chevron-right"></i></a>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </fieldset>
+  </main>
+
+  <!-- 푸터영역 -->
+  <footer>
+    <input type="submit" value="작성 완료">
+  </footer>
+</form>
+</body>
+</html>
